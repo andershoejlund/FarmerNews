@@ -1,0 +1,38 @@
+@import './colors';
+
+body {
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 10pt;
+    color: #828282;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+
+.text-center {
+	text-align: center;
+}
+.text-right {
+	text-align: right;
+}
+.text-uppercase {
+	text-transform: uppercase;
+}
+
+.f-small {
+	font-size: 1.8rem;
+}
+
+.d-block {
+	display: block;
+}
+
+.notice {
+	background-color: lighten(green, 30%);
+}
+.alert {
+	background-color: lighten(red, 10%);
+}

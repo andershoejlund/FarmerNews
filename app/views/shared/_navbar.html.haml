@@ -1,0 +1,9 @@
+.navbar
+  = link_to "FarmerNews", root_path(), class: "root-text"
+  |
+  = link_to "news", news_index_path(), class: helper_active_link(news_index_path())
+  |
+  = link_to "comments", all_comments_path(), class: helper_active_link(all_comments_path())
+  |
+  = link_to "ask", questions_path(), class: helper_active_link(questions_path())
+  |

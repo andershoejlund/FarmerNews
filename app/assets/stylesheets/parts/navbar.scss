@@ -1,0 +1,22 @@
+@import '../imports/colors';
+
+.navbar {
+  margin-top: 10px;
+  padding: 5px 4px;
+  background-color: $farmer_green;
+  color: black;
+  .root-text {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    font-size: 1.2em;
+  }
+  a {
+    color: black;
+    text-decoration: none;
+    &.active {
+      text-decoration: underline;
+      color: white;
+    }
+  }
+}
