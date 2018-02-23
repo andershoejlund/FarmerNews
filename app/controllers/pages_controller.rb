@@ -1,5 +1,8 @@
 class PagesController < ApplicationController
   def index
+    @news = News.all
+    @questions = Question.all
+    @posts = @news.any? ? @news.merge(@questions) : @questions
   end
 
   def guidelines
