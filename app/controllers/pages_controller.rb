@@ -2,7 +2,12 @@ class PagesController < ApplicationController
   def index
     @news = News.all
     @questions = Question.all
-    @posts = @news.any? ? @news.merge(@questions) : @questions
+    @posts = @news + @questions
+    @posts = @posts.sort_by(&:created_at)
+  end
+
+  def post
+    @post = Question.find(params[:id])
   end
 
   def guidelines

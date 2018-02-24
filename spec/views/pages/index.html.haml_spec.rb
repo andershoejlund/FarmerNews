@@ -9,7 +9,6 @@ RSpec.describe "pages/index.html.haml", type: :feature do
   let(:news) { create(:news, user_id: user.id) }
 
   describe "#index" do
-
     it "should show both questions and news" do
       visit root_path()
       expect(page).to have_content(question.title)
@@ -17,17 +16,14 @@ RSpec.describe "pages/index.html.haml", type: :feature do
     end
   end
 
-  context "when a user is logged in" do
-    it "navbar should show 'submit', username and logout" do
-      sign_in user
-      visit root_path()
-      within('.navbar') do
-        expect(page).to have_content(user.username)
-        expect(page).to have_content("logout")
-        expect(page).to have_content("submit")
-      end
-    end
-  end
+  # describe "#post" do
+  #   it "should show single post with title and description, when question is clicked" do
+  #     click_link question.title
+  #     expect(page).to have_content(question.title)
+  #     expect(page).to have_content(question.description)
+  #   end
+  # end
 
 end
+
 

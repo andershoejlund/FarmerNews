@@ -1,12 +1,4 @@
-%h2 Everything!
 %table
   %tbody
-    - @posts.each do |p|
-      - if p.type_oh == 0 # news
-        = link_to p.title, p.url, target: "_blank"
-        .small
-          = p.user.username 
-          = time_ago_in_words(p.created_at) + " ago"
-      - else
-        %p= p.title
+    = render partial: 'pages/each_post', collection: @posts, locals: {i: 1}
 
