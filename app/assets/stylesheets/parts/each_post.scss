@@ -1,3 +1,12 @@
+@import '../imports/colors';
+
 .each-post {
-  background-color: lighten(grey, 20%);
+  padding: 5px;
+  .post-count {
+  }
+  .small {
+    font-size: 0.8em;
+    color: $font-grey; 
+  }
 }
+

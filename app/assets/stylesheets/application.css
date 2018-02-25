@@ -13,6 +13,9 @@
  *= require skeleton/normalize
  *= require imports/default
  *= require parts/navbar
+ *= require parts/each_post
+ *= require pages
+ *= require submits
 
  *= require_self
 

@@ -1,10 +1,11 @@
-- each_post_counter += 1
-.each-post
-  = each_post_counter.to_s + "."
+-# Should be wrapped in a ul-tag for showing numbers
+%li.each-post
   - if each_post.type_oh == 0 # news
     = link_to each_post.title, each_post.url, target: "_blank"
-  - else
-    = link_to each_post.title, show_post_path(each_post.id)
+  - else # questions
+    = link_to "ASK FN: #{each_post.title}", show_post_path(each_post.id)
   .small
-  = each_post.user.username 
-  = time_ago_in_words(each_post.created_at) + " ago"
+    = each_post.user.username 
+    = time_ago_in_words(each_post.created_at) + " ago"
+
+

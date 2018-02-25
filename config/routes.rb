@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'submits/new'
+
   resources :questions do
     resources :comments
   end
@@ -8,7 +10,8 @@ Rails.application.routes.draw do
     resources :comments
   end
 
-  get 'new-subject' => 'news#new', as: :new_subject
+  get 'new-subject' => 'submits#new', as: :new_submit
+  post 'create-subject' => 'submits#create', as: :submit_content
 
   # All comments
   get '/all-comments' => 'comments#index', as: :all_comments
