@@ -28,6 +28,7 @@
     .container
       = render partial: 'shared/messages'
       = render partial: 'shared/navbar'
-      = yield
+      .content-wrapper
+        = yield
       = render partial: 'shared/footer'
 
