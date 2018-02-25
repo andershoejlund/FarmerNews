@@ -3,7 +3,7 @@ class PagesController < ApplicationController
     @news = News.all
     @questions = Question.all
     @posts = @news + @questions
-    @posts = @posts.sort_by(&:created_at)
+    @posts = @posts.sort_by(&:created_at).reverse!
   end
 
   def post

@@ -1,11 +1,14 @@
 @import 'imports/colors';
 
 .notices, .alerts {
-  padding-top: 10px;
+  line-height: 30px;
   text-align: center;
 }
-.container {
 
+.container {
   background-color: $background-grey;
   padding-bottom: 40px;
+}
+.content-wrapper {
+  padding: 20px;
 }

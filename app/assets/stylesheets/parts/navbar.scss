@@ -1,7 +1,11 @@
 @import '../imports/colors';
 
 .navbar {
-  margin-top: 10px;
+  .navbar-icon {
+    border: 2px solid white;
+    width: 15px;
+    margin-bottom: -3px;
+  }
   padding: 5px 4px;
   background-color: $farmer_green;
   color: black;

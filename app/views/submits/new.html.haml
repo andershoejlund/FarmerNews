@@ -1,16 +1,17 @@
+#errorMessage.text-center 
 = simple_form_for :content, { url: submit_content_path } do |f| 
   .form-title
     = f.label :title, "title"
-    = f.text_field :title, size: 50 
+    = f.text_field :title, size: 50, value: params[:content].nil? ? "" : params[:content][:title]
   .form-url
     = f.label :url, "url"
-    = f.text_field :url, size: 50
+    = f.text_field :url, size: 50, value: params[:content].nil? ? "" : params[:content][:url]
   %b.or OR
   .form-description
     = f.label :description, "text"
-    = f.text_area :description, rows: 4, cols: 49
+    = f.text_area :description, rows: 4, cols: 49, value: params[:content].nil? ? "" : params[:content][:description]
     
-  .form-submit= f.submit "Submit", class: "btn"
+  .form-submit= f.submit "submit", class: "btn"
   
 %p.text-center 	Leave url blank to submit a question for discussion. If there is no url, the text (if any) will appear at the top of the thread.
 
