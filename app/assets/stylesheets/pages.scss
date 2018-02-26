@@ -1,5 +1,13 @@
 @import 'imports/colors';
 
+p, h1,h2,h3,h4,h5,h6 {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+ol {
+  margin-top: 6px;
+}
 .notices, .alerts {
   line-height: 30px;
   text-align: center;
@@ -10,5 +18,4 @@
   padding-bottom: 40px;
 }
 .content-wrapper {
-  padding: 20px;
 }

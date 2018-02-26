@@ -1,5 +1,17 @@
 @import './colors';
 
+.pt-1 {
+  padding-top: 2px;
+}
+.pt-2 {
+  padding-top: 5px;
+}
+.pt-3 {
+  padding-top: 10px;
+}
+.pt-4 {
+  padding-top: 15px;
+}
 input[type="button" i], input[type="submit" i], input[type="reset" i], input[type="file" i]::-webkit-file-upload-button, button {
     border-color: rgb(216, 216, 216) rgb(209, 209, 209) rgb(186, 186, 186);
     border-style: solid;
@@ -20,6 +32,7 @@ body {
 }
 
 .container {
+  max-width: 1200px;
   width: 80%;
   margin: 0 auto;
 }

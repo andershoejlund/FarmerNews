@@ -1,0 +1,15 @@
+%center
+  %span.footer-links
+    = link_to 'Guidelines', pages_guidelines_path()
+    |
+    = link_to 'FAQ', pages_faq_path()
+    |
+    = link_to 'Security', pages_security_path()
+    |
+    = link_to 'Contact', pages_contact_path()
+%center.pt-3
+  %span.search_field
+    Search:
+    = text_field_tag search_path()
+
+

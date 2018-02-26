@@ -16,6 +16,7 @@
  *= require parts/each_post
  *= require pages
  *= require submits
+ *= require mobile
 
  *= require_self
 

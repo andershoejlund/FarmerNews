@@ -5,6 +5,7 @@ class QuestionsController < ApplicationController
   end
 
   def index
+    @questions = Question.all
   end
 
   def edit

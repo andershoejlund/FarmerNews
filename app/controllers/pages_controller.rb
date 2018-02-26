@@ -13,6 +13,12 @@ class PagesController < ApplicationController
   def guidelines
   end
 
+  def security
+  end
+
+  def search
+  end
+
   def faq
   end
 

@@ -1,4 +1,4 @@
--# Should be wrapped in a ul-tag for showing numbers
+-# Should be wrapped in a ol-tag for showing numbers
 %li.each-post
   - if each_post.type_oh == 0 # news
     = link_to each_post.title, each_post.url, target: "_blank" 
@@ -6,7 +6,6 @@
   - else # questions
     = link_to "ASK FN: #{each_post.title}", question_path(each_post.id)
   .small
-    = each_post.user.username 
     = time_ago_in_words(each_post.created_at) + " ago"
 
 
