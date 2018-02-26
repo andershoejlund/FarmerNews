@@ -2,6 +2,15 @@ require 'rails_helper'
 
 RSpec.describe PagesController, type: :controller do
 
+  describe "post #VOTE" do
+    context "a user can only vote when logged in" do
+      it "should vote when logged in" do
+      end
+      it "shouldn't vote when not logged in" do
+      end
+    end
+  end
+
   describe "GET #guidelines" do
     it "returns http success" do
       get :guidelines
@@ -29,6 +38,4 @@ RSpec.describe PagesController, type: :controller do
       expect(response).to have_http_status(:success)
     end
   end
-
-
 end

@@ -19,7 +19,7 @@ Rails.application.routes.draw do
   devise_for :users
   get 'users/:id' => 'users#profile', as: :user
   # Pages
-  post 'search' => 'pages#search'
+  post 'search' => 'pages#search', as: :search
   get 'pages/guidelines'
   get 'pages/faq'
   get 'pages/security'

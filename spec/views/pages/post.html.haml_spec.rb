@@ -9,7 +9,7 @@ RSpec.describe "pages/post.html.haml", type: :feature do
   let(:news) { create(:news, user_id: user.id) }
 
   it "should show post title and description" do
-    visit show_post_path(question.id)
+    visit question_path(question.id)
     expect(page).to have_content(question.title)
     expect(page).to have_content(question.description)
   end

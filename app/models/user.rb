@@ -8,5 +8,6 @@ class User < ApplicationRecord
   has_many :favorites
   has_many :questions
   has_many :news
+  has_many :votes
 
 end

@@ -18,7 +18,7 @@ RSpec.describe "pages/index.html.haml", type: :feature do
     context "when a question is clicked" do
       it "should direct to question_path" do
         click_link question.title
-        expect(current_path).to eq(show_post_path(question.id))
+        expect(current_path).to eq(question_path(question.id))
       end
     end
 

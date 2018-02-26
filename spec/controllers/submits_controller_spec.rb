@@ -7,14 +7,14 @@ RSpec.describe SubmitsController, type: :controller do
   describe "GET #new" do
     it "returns http success" do
       get :new
-      expect(response).to have_http_status(:success)
+      expect(response).to have_http_status(302)
     end
   end
 
   describe "POST #create" do
-    it "returns http success" do
+    it "returns http redirect to root" do
       post :create, params: {content: submit_params}
-      expect(response).to have_http_status(:success)
+      expect(response).to have_http_status(302)
     end
   end
 

@@ -1,0 +1,4 @@
+- unless @search_string.nil? 
+  %p #{pluralize(@results.length, "Result", "Results")} for: '#{@search_string}' 
+%ul
+  =render partial: 'each_post', collection: @results

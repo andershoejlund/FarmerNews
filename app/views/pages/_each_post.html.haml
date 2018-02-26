@@ -6,6 +6,8 @@
   - else # questions
     = link_to "ASK FN: #{each_post.title}", question_path(each_post.id)
   .small
-    = time_ago_in_words(each_post.created_at) + " ago"
+    = each_post.user.username
+    |
+    = time_ago_in_words(each_post.created_at).gsub('about', '') + " ago"
 
 
