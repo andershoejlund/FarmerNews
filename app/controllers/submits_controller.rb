@@ -10,7 +10,7 @@ class SubmitsController < ApplicationController
     elsif (params[:content][:description].present? && params[:content][:url].present?)
       flash.now[:notice] = "You can't have both url and description filled. Read more in the bottom of the page."
       render :new
-    elsif !(params[:content][:url] =~ /\A#{URI::regexp(['http', 'https'])}\z/)
+    elsif params[:content][:url].present? && !(params[:content][:url] =~ /\A#{URI::regexp(['http', 'https'])}\z/)
       flash.now[:notice] = "Your URL is invalid. Remember http:// or https://. Try again"
       render :new
     else
