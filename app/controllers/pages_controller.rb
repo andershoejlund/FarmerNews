@@ -1,9 +1,15 @@
 class PagesController < ApplicationController
+
   def index
     @news = News.all
     @questions = Question.all
     @posts = @news + @questions
     @posts = @posts.sort_by(&:created_at).reverse!
+  end
+
+  def submissions
+    @user = User.find(params[:id])
+    @posts = (@user.questions + @user.news).sort_by(&:created_at).reverse!
   end
 
   def post

@@ -1,0 +1,6 @@
+- content_for :username do 
+  | 
+  =link_to @user.username + "'s", user_path(@user.id), class: "active"
+
+%ol
+  = render partial: 'pages/each_post', collection: @posts

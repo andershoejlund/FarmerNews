@@ -2,7 +2,6 @@ require 'faker'
 require 'devise'
 
 user = User.new(username: "peterhoejlund", email: Faker::Internet.email, password: "hejmeddig", password_confirmation: "hejmeddig")
-byebug
 user.save
 user_two = User.create(username: "peterandersen", email: Faker::Internet.email, password: "hejmeddig", password_confirmation: "hejmeddig")
 user_two.save

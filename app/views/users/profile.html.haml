@@ -1,3 +1,5 @@
 %ul 
   %li= "username: " + @user.username
-  %li= "email: " + @user.email
+  - if @user.questions.any? || @news.news.any?
+    %li= link_to "submissions", submissions_path(@user.id)
+

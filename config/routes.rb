@@ -19,7 +19,9 @@ Rails.application.routes.draw do
 
   devise_for :users
   get 'users/:id' => 'users#profile', as: :user
+
   # Pages
+  get 'pages/submissions/:id' => 'pages#submissions', as: :submissions
   post 'search' => 'pages#search', as: :search
   get 'pages/guidelines'
   get 'pages/faq'
@@ -28,5 +30,6 @@ Rails.application.routes.draw do
   get 'pages/contact'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
   root 'pages#index'
 end

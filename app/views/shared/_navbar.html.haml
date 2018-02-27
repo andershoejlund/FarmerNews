@@ -18,5 +18,8 @@
     .float-right
       |
       = link_to "login", new_user_session_path()
+  - if content_for?(:username)
+    = yield :username 
+
 
 

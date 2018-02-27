@@ -15,7 +15,7 @@
     = link_to "ASK FN: #{each_post.title}", question_path(each_post.id), class: "question-link"
   .small.underline
     %span.votes= each_post.votes.length.to_s + " points by "
-    = each_post.user.username
+    = link_to each_post.user.username, user_path(each_post.user.id)
     |
     = time_ago_in_words(each_post.created_at).gsub('about', '') + " ago"
 

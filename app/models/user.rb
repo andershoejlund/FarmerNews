@@ -10,4 +10,7 @@ class User < ApplicationRecord
   has_many :news
   has_many :votes
 
+  validates :email, uniqueness: true
+  validates :username, uniqueness: true
+
 end
