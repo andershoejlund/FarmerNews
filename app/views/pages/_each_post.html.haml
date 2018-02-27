@@ -1,11 +1,16 @@
 -# Should be wrapped in a ol-tag for showing numbers
-%li.each-post
+%li.each-post{id: "each-post-id-" + each_post.id.to_s + "-type-" + each_post.type_oh.to_s }
+  - if user_signed_in?
+    = link_to "&#9650;".html_safe, vote_up_path(each_post.id, type: each_post.type_oh), remote: true, method: :post, class: "vote-up"
+  - else
+    = link_to "&#9650;".html_safe, new_user_session_path() 
   - if each_post.type_oh == 0 # news
-    = link_to each_post.title, each_post.url, target: "_blank" 
+    = link_to each_post.title, each_post.url, target: "_blank", class: "news-link" 
     %span.small= "(" + helper_get_root_url(each_post.url) + ")" unless each_post.url.nil?
   - else # questions
-    = link_to "ASK FN: #{each_post.title}", question_path(each_post.id)
-  .small
+    = link_to "ASK FN: #{each_post.title}", question_path(each_post.id), class: "question-link"
+  .small.underline
+    %span.votes= each_post.votes.length.to_s + " points by "
     = each_post.user.username
     |
     = time_ago_in_words(each_post.created_at).gsub('about', '') + " ago"

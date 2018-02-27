@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
   get 'submits/new'
+  post 'vote-up/:id' => 'votes#vote_up', as: :vote_up
 
   resources :questions do
     resources :comments

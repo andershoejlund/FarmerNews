@@ -1,5 +1,9 @@
 @import './colors';
 
+ol {
+  list-style-position: inside;
+}
+
 .pt-1 {
   padding-top: 2px;
 }

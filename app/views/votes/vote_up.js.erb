@@ -1,0 +1,6 @@
+post = document.getElementById("each-post-id-" + "<%= @post_id %>" + "-type-" + "<%= @type_oh %>");
+number = post.getElementsByClassName("votes")[0];
+arrow = post.getElementsByClassName("vote-up")[0];
+number.innerHTML = "<%= @post_votes %>" + " points by";
+arrow.style.visibility = "hidden";
+console.log(number);
